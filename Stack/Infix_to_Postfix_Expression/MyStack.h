@@ -16,6 +16,7 @@ public:
     char Pop();
     bool IsEmpty();
     void Push(char);
+    char Top_Value();
     ListNode *Top;
 
     void display();
@@ -50,6 +51,10 @@ void MyStack::display() {
         temp = temp -> next;
     }
     std::cout << std::endl;
+}
+
+char MyStack::Top_Value() {
+    return Top -> data;
 }
 
 #endif //POSTFIXEXPRESSION_MYSTACK_H
