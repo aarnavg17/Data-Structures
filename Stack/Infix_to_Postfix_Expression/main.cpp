@@ -49,7 +49,7 @@ int main() {
              do {
                 s = in_exp.Pop();
                 post_exp.Push(s);
-            }while(in_exp.Top_Value() != '(');
+            } while(in_exp.Top_Value() != '(');
         }
         else {
             while (precedence(in_exp.Top_Value()) > precedence(sym)) {
