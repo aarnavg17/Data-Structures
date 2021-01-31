@@ -33,7 +33,7 @@ Stack::~Stack() {
 void Stack::push(int elem) {
     if(top == (length-1)) {
         int *pTemp = new int[length + 1];
-        memcpy(pTemp, p, length);
+        memcpy(pTemp, p, length*sizeof(int));
         delete[] p;
         p = pTemp;
     }
