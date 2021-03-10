@@ -1,3 +1,0 @@
-/Users/aarnavg17/Desktop/Github/CityU-Courses/CS3334 Data Structures/Lectures/Stack/PostfixExpression/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/aarnavg17/Desktop/Github/CityU-Courses/CS3334 Data Structures/Lectures/Stack/PostfixExpression/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/aarnavg17/Desktop/Github/CityU-Courses/CS3334 Data Structures/Lectures/Stack/PostfixExpression/cmake-build-debug/CMakeFiles/PostfixExpression.dir
