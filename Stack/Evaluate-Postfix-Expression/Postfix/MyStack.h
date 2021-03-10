@@ -33,7 +33,6 @@ void MyStack::Push(int new_item) {
 }
 
 int MyStack::Pop() {
-    ListNode* p;
     if (!IsEmpty()) {
         int rtn_value;
         rtn_value = Top -> data;
