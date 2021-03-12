@@ -32,9 +32,6 @@ public:
     void append(int data) {
         if (head != nullptr) {
             Node* newNode = new Node(data, nullptr, tail);
-            /*newNode -> data = data;
-            newNode -> next = nullptr;
-            newNode -> prv = tail;*/
             tail -> next = newNode;
             tail = newNode;
         }
@@ -48,13 +45,6 @@ public:
 
     int length() {
         return len;
-        /*int cnt = 0;
-        Node* x = head;
-        while(x != nullptr) {
-            cnt++;
-            x = x -> next;
-        }
-        return cnt;*/
     }
 
     void display() {
@@ -79,9 +69,8 @@ public:
         }
         else if (pos > len/2) {
             Node* x = tail;
-            for (int i = len-1; i > pos; i--) {
+            for (int i = len-1; i > pos; i--)
                 x = x -> prv;
-            }
             Node* store = x;
             x = x -> prv;
             Node* newNode = new Node(data, store, x);
@@ -91,9 +80,8 @@ public:
         }
         else {
             Node* x = head;
-            for (int i = 0; i < pos-1; i++) {
+            for (int i = 0; i < pos-1; i++)
                 x = x -> next;
-            }
             Node* store = x;
             x = x -> next;
             Node* newNode = new Node(data, x, store);
@@ -104,10 +92,8 @@ public:
     }
 
     void deleting(int pos) {
-        //cout << "Aaya kya?\n";
-        if (len == 0) {
+        if (len == 0)
             cout << "List underflow";
-        }
         else {
             Node* x = head;
             if (pos == 0) {
@@ -120,18 +106,14 @@ public:
                 tail -> next = nullptr;
             }
             else {
-                if (pos < len/2) {
-                    for (int i=0; i < pos; i++) {
+                if (pos < len/2)
+                    for (int i=0; i < pos; i++)
                         x = x -> next;
-                    }
-                }
                 else {
                     x = tail;
-                    for (int i=0; i < len-pos-1; i++) {
+                    for (int i=0; i < len-pos-1; i++)
                         x = x -> prv;
-                    }
                 }
-                //cout << "Deleting: " << x -> data << endl;
                 x -> prv -> next = x -> next;
                 x -> next -> prv = x -> prv;
             }
@@ -144,7 +126,6 @@ public:
     void clearing() {
         Node* x = head;
         for (int i = 0; i < len; i++) {
-            //deleting(i);
             Node* y = x -> next;
             delete(x);
             Node* x = y;
@@ -152,35 +133,12 @@ public:
         head = tail = nullptr;
     }
 
-    //LinkedList slice(int beg, int last) {
-
-    //}
-
-    /*int atpos() {
-
-    }*/
-
     bool has(int num) {
         for (Node* x = head; x != tail; x = x -> next)
-            if (x -> data == num) return true;
+            if (x -> data == num)
+                return true;
         return false;
     }
-
-    /*int finding() {
-
-    }
-
-    void sort1() {
-        //moving around the whole box
-    }
-
-    void sort2() {
-        //just sorting the values
-    }
-
-    void reversing() {
-
-    }*/
 };
 
 class CircularLinkedList {
@@ -196,9 +154,7 @@ public:
     void append(int data) {
         if (head != nullptr) {
             Node* newNode = new Node(data, head, head -> prv);
-            //cout << "HUdo\n";
             newNode -> prv -> next = newNode;
-            //cout << "HUdo\n";
             head -> prv = newNode;
         }
         else {
@@ -206,24 +162,16 @@ public:
             head -> next = head;
             head -> prv = head;
         }
-        //cout << "Lalalala\n";
         len++;
     }
 
     int length() {
         return len;
-        /*if (head == nullptr) return 0;
-        int cnt = 0;
-        Node* x = head;
-        while(x -> next != head) {
-            cnt++;
-            x = x -> next;
-        }
-        return ++cnt;*/
     }
 
     void display() {
-        if (head == nullptr) cout << "Empty.";
+        if (head == nullptr)
+            cout << "Empty.";
         else {
             Node* x = head;
             do {
@@ -235,30 +183,32 @@ public:
     }
 
     void inserting(int data, int pos) {
-        if (pos > len) inserting(data, pos-len);
-        if (pos < 0) pos += len;
+        if (pos > len)
+            inserting(data, pos-len);
+        if (pos < 0)
+            pos += len;
         if (pos == len) {
             append(data);
             return;
         }
-        if (pos == 0) pos = len;
+        if (pos == 0)
+            pos = len;
         Node* x = head;
-        for (int i = 0; i < pos-1; i++) {
+        for (int i = 0; i < pos-1; i++)
             x = x -> next;
-        }
         Node* store = x;
         x = x -> next;
         Node* newNode = new Node(data, x, store);
         x -> prv = newNode;
         store -> next = newNode;
-        if (pos == len) head = newNode;
+        if (pos == len)
+            head = newNode;
         len++;
     }
 
     void deleting(int pos) {
-        if (len == 0) {
+        if (len == 0)
             cout << "List underflow";
-        }
         else {
             Node* x = head;
             if (pos == 0) {
@@ -270,7 +220,6 @@ public:
                 for (int i=0; i < pos; i++) {
                     x = x -> next;
                 }
-                //cout << "Deleting: " << x -> data << endl;
                 x -> prv -> next = x -> next;
                 x -> next -> prv = x -> prv;
             }
@@ -282,7 +231,6 @@ public:
     void clearing() {
         Node* x = head;
         for (int i = 0; i < len; i++) {
-            //deleting(i);
             Node* y = x -> next;
             delete(x);
             Node* x = y;
@@ -292,35 +240,5 @@ public:
 };
 
 int main() {
-    {
-        LinkedList list1;
-        list1.append(0);
-        list1.append(1);
-        list1.append(2);
-        list1.append(3);
-        list1.append(4);
-        list1.append(5);
-        list1.display();
-        list1.inserting(9, 4);
-        list1.deleting(0);
-        list1.inserting(8, list1.length());
-        list1.deleting(list1.length() - 1);
-        list1.display();
-        //list1.clearing();
-        list1.display();
-        cout << list1.has(4);
-    }
-    /*cout << "\n";
-    {
-        CircularLinkedList list1;
-        list1.append(0);
-        list1.append(1);
-        list1.append(2);
-        list1.append(3);
-        list1.append(4);
-        list1.append(5);
-        list1.display();
-        list1.inserting(9, 4);
-        list1.display();
-    }*/
+
 }
