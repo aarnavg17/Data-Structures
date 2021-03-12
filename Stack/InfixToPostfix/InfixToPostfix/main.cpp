@@ -1,7 +1,8 @@
+//Infix to Postfix
+
 #include <iostream>
 #include <string>
-#include "MyStack.h"
-#include "ListNode.h"
+#include <stack>
 using namespace std;
 
 int precedence(char sym) {
@@ -34,40 +35,50 @@ int precedence(char sym) {
 }
 
 int main() {
-    MyStack in_exp;
-    MyStack post_exp;
+    stack<char> in_exp;
+    stack<char> post_exp;
     string expression;
     char s;
-    in_exp.Push('#');
+    in_exp.push('#');
     cout << "Enter an infix expression: ";
     getline(cin, expression);
-    //cout << expression;
     for (char sym : expression) {
-        //cout << sym;
-        //cin >> sym;
-        if (sym == '\n' || sym == '\0') break;
-        else if ((sym >= '0' && sym <= '9') || (sym >= 'A' && sym <= 'Z')) post_exp.Push(sym);
+        if (sym == '\n' || sym == '\0')
+            break;
+        else if ((sym >= '0' && sym <= '9') || (sym >= 'A' && sym <= 'Z')) post_exp.push(sym);
         else if (sym == ')') {
-            //ListNode* temp = in_exp.Top;
              do {
-                s = in_exp.Pop();
-                post_exp.Push(s);
-            } while(in_exp.Top_Value() != '(');
-            in_exp.Pop();
+                s = in_exp.top();
+                in_exp.pop();
+                post_exp.push(s);
+            } while(in_exp.top() != '(');
+            in_exp.pop();
         }
-        else if (sym == '(') in_exp.Push('(');
+        else if (sym == '(')
+            in_exp.push('(');
         else {
-            while (precedence(in_exp.Top_Value()) > precedence(sym)) {
-                s = in_exp.Pop();
-                post_exp.Push(s);
+            while (precedence(in_exp.top()) > precedence(sym)) {
+                s = in_exp.top();
+                in_exp.pop();
+                post_exp.push(s);
             }
-            in_exp.Push(sym);
+            in_exp.push(sym);
         }
     }
-    while(in_exp.Top_Value() != '#') {
-        s = in_exp.Pop();
-        if (s != '(') post_exp.Push(s);
+    while(in_exp.top() != '#') {
+        s = in_exp.top();
+        in_exp.pop();
+        if (s != '(')
+            post_exp.push(s);
     }
-    post_exp.display();
-    //exp.display();
+    stack<char> final_stack;
+    while(not post_exp.empty()) {
+        char x = post_exp.top();
+        final_stack.push(x);
+    }
+    while (!final_stack.empty()) {
+        char x = final_stack.top();
+        final_stack.pop();
+        cout << x << " ";
+    }
 }

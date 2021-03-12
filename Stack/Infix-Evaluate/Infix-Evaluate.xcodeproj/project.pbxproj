@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ADD53F6425F92E6200D63489 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADD53F6325F92E6200D63489 /* main.cpp */; };
+		AD0B017F25FBD4FA00274BAD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD0B017E25FBD4FA00274BAD /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		ADD53F5E25F92E6200D63489 /* CopyFiles */ = {
+		AD0B017925FBD4FA00274BAD /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		ADD53F6025F92E6200D63489 /* Evaluate-Postfix-Expression */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Evaluate-Postfix-Expression"; sourceTree = BUILT_PRODUCTS_DIR; };
-		ADD53F6325F92E6200D63489 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		AD0B017B25FBD4FA00274BAD /* Infix-Evaluate */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Infix-Evaluate"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD0B017E25FBD4FA00274BAD /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		ADD53F5D25F92E6200D63489 /* Frameworks */ = {
+		AD0B017825FBD4FA00274BAD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,64 +38,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		ADD53F5725F92E6200D63489 = {
+		AD0B017225FBD4FA00274BAD = {
 			isa = PBXGroup;
 			children = (
-				ADD53F6225F92E6200D63489 /* Postfix */,
-				ADD53F6125F92E6200D63489 /* Products */,
+				AD0B017D25FBD4FA00274BAD /* Infix-Evaluate */,
+				AD0B017C25FBD4FA00274BAD /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		ADD53F6125F92E6200D63489 /* Products */ = {
+		AD0B017C25FBD4FA00274BAD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ADD53F6025F92E6200D63489 /* Evaluate-Postfix-Expression */,
+				AD0B017B25FBD4FA00274BAD /* Infix-Evaluate */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		ADD53F6225F92E6200D63489 /* Postfix */ = {
+		AD0B017D25FBD4FA00274BAD /* Infix-Evaluate */ = {
 			isa = PBXGroup;
 			children = (
-				ADD53F6325F92E6200D63489 /* main.cpp */,
+				AD0B017E25FBD4FA00274BAD /* main.cpp */,
 			);
-			path = Postfix;
+			path = "Infix-Evaluate";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ADD53F5F25F92E6200D63489 /* Evaluate-Postfix-Expression */ = {
+		AD0B017A25FBD4FA00274BAD /* Infix-Evaluate */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ADD53F6725F92E6200D63489 /* Build configuration list for PBXNativeTarget "Evaluate-Postfix-Expression" */;
+			buildConfigurationList = AD0B018225FBD4FA00274BAD /* Build configuration list for PBXNativeTarget "Infix-Evaluate" */;
 			buildPhases = (
-				ADD53F5C25F92E6200D63489 /* Sources */,
-				ADD53F5D25F92E6200D63489 /* Frameworks */,
-				ADD53F5E25F92E6200D63489 /* CopyFiles */,
+				AD0B017725FBD4FA00274BAD /* Sources */,
+				AD0B017825FBD4FA00274BAD /* Frameworks */,
+				AD0B017925FBD4FA00274BAD /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Evaluate-Postfix-Expression";
-			productName = Postfix;
-			productReference = ADD53F6025F92E6200D63489 /* Evaluate-Postfix-Expression */;
+			name = "Infix-Evaluate";
+			productName = "Infix-Evaluate";
+			productReference = AD0B017B25FBD4FA00274BAD /* Infix-Evaluate */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		ADD53F5825F92E6200D63489 /* Project object */ = {
+		AD0B017325FBD4FA00274BAD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					ADD53F5F25F92E6200D63489 = {
+					AD0B017A25FBD4FA00274BAD = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
-			buildConfigurationList = ADD53F5B25F92E6200D63489 /* Build configuration list for PBXProject "Evaluate-Postfix-Expression" */;
+			buildConfigurationList = AD0B017625FBD4FA00274BAD /* Build configuration list for PBXProject "Infix-Evaluate" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -103,29 +103,29 @@
 				en,
 				Base,
 			);
-			mainGroup = ADD53F5725F92E6200D63489;
-			productRefGroup = ADD53F6125F92E6200D63489 /* Products */;
+			mainGroup = AD0B017225FBD4FA00274BAD;
+			productRefGroup = AD0B017C25FBD4FA00274BAD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ADD53F5F25F92E6200D63489 /* Evaluate-Postfix-Expression */,
+				AD0B017A25FBD4FA00274BAD /* Infix-Evaluate */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		ADD53F5C25F92E6200D63489 /* Sources */ = {
+		AD0B017725FBD4FA00274BAD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADD53F6425F92E6200D63489 /* main.cpp in Sources */,
+				AD0B017F25FBD4FA00274BAD /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		ADD53F6525F92E6200D63489 /* Debug */ = {
+		AD0B018025FBD4FA00274BAD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -184,7 +184,7 @@
 			};
 			name = Debug;
 		};
-		ADD53F6625F92E6200D63489 /* Release */ = {
+		AD0B018125FBD4FA00274BAD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -236,7 +236,7 @@
 			};
 			name = Release;
 		};
-		ADD53F6825F92E6200D63489 /* Debug */ = {
+		AD0B018325FBD4FA00274BAD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -246,7 +246,7 @@
 			};
 			name = Debug;
 		};
-		ADD53F6925F92E6200D63489 /* Release */ = {
+		AD0B018425FBD4FA00274BAD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -259,25 +259,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ADD53F5B25F92E6200D63489 /* Build configuration list for PBXProject "Evaluate-Postfix-Expression" */ = {
+		AD0B017625FBD4FA00274BAD /* Build configuration list for PBXProject "Infix-Evaluate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ADD53F6525F92E6200D63489 /* Debug */,
-				ADD53F6625F92E6200D63489 /* Release */,
+				AD0B018025FBD4FA00274BAD /* Debug */,
+				AD0B018125FBD4FA00274BAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ADD53F6725F92E6200D63489 /* Build configuration list for PBXNativeTarget "Evaluate-Postfix-Expression" */ = {
+		AD0B018225FBD4FA00274BAD /* Build configuration list for PBXNativeTarget "Infix-Evaluate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ADD53F6825F92E6200D63489 /* Debug */,
-				ADD53F6925F92E6200D63489 /* Release */,
+				AD0B018325FBD4FA00274BAD /* Debug */,
+				AD0B018425FBD4FA00274BAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = ADD53F5825F92E6200D63489 /* Project object */;
+	rootObject = AD0B017325FBD4FA00274BAD /* Project object */;
 }
