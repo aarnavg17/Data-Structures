@@ -74,6 +74,8 @@ int main() {
     stack<char> final_stack;
     while(not post_exp.empty()) {
         char x = post_exp.top();
+        post_exp.pop();
+        cout << x;
         final_stack.push(x);
     }
     while (!final_stack.empty()) {
